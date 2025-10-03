@@ -1,0 +1,2 @@
+Este archivo es de prueba para saber si se une al repo.
+Se comparten los archivos dentro de los directorios, las letras cambian en los directorios (en los archivos).
