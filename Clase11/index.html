@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 11</title>
+</head>
+<body>
+    <header>
+    <h1>Clase 11 - Formularios</h1>
+    <p>En esta clase vamos a trabajar con formularios de todo tipo.</p>
+</header>
+<section>
+    <h2>Empezamos con un formulario sencillo</h2>
+    <p>La etiqueta que usaremos sera FORM y desde ahi cargarlo con sus atributos, uno de ellos es el METHOD (hace referencia a los métodos http) en referencia a ello tendremos el metodo GET (obtener datos sin modificar la base de datos, solicita info del server x), la otra forma de metodo es POST (envia y modifica datos en la base de datos) este tambie puede llegar a servir para modificar datos en la base.</p>
+    <p>Otro atributo es el ACTION (sirve para matchearlo a un archivo externo) para ello le damos la ruta del archivo en el atributo; en ello segun el metodo que utilice todos los datos enviados iran al archivo de la ruta.</p>
+    <p>La etiqueta LABEL (nos servira para que el usuario vea lo que solicitamos) es una etiqueta que muestra informacion al usuario para que sepa que datos debe completar, por ejemplo cuando le pedimos un "nombre" en el formulario.</p>
+    <p>Otra etiqueta que utilizaremos es INPUT (esta etiqueta le da al usuario un espacio para que complete los datos solicitados) en esta etiqueta veremos un recuadro para llenar con los datos solicitados. Trae un atributo TYPE (define los tipos de adtos que pueden solicitarse) especifica que datos pueden completar en el espacio, por ejemplo "TEXT". La etiqueta INPUT en sus atributos debe contar con un ID que estará vinculado al atributo FOR del LABEL para saber que los datos que no s de el usuario vayan con ese nombre a buscar la variable del archivo del ACTION.</p>
+    <p>El BUTTON de tipo RESET nos sirve para borrar los datos ingresados, lo mismo puedo hacerlo con la etiqueta INPUT.</p>
+    <p>Por tema de validaciones de datos puedo agregar atributos que sirvan para corroborar los datos solicitados cuando los ingresa el usuario (min, max, minLenght, maxLenght, etc), más adelante lo puedo sumar a las validaciones por javascript. Y el atributo REQUIRED que obliga al usuario a cargar datos en el campo.</p>
+        <form method="get" action="./index.js"><!--Solicita informacion de la base-->
+            <label for="nombre">Nombre: (GET)</label>
+            <input type="text" id="nombre">
+            <button type="submit">Enviar Datos</button>
+        </form>
+        <form method="post" action="./index.js"><!--Envia y modifica datos en la base-->
+            <label for="nombre1">Nombre: (POST)</label>
+            <input type="text" id="nombre1" minlength="4" maxlength="20" required>
+            <br>
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" min="1" max="100" required>
+            <br>
+            <button type="submit">Enviar</button>
+            <input type="button" value="Este es un boton"><!--Otra forma de usar un boton con input-->
+            <button type="reset">Borrar datos</button>
+            <input type="reset" value="borrar datos input">
+        </form>
+
+    </section>
+</body>
+</html>
