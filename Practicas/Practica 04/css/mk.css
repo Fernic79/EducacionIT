@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: fuchsia;
+}
+nav{
+    background-image: url(../img/flecha.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    margin-bottom: 25px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+nav h1{
+    font-family: Tahoma;
+    font-size: 32px;
+    margin: 10px 0 15px 55px;
+}
+section div h1{
+    width: 453px;
+    font-size: 3em;
+    text-align: center;
+    padding: 0 0 5px 0;
+    color: red;
+    margin: -22px 15px 10px 0px;
+    background-color: rgba(240, 248, 255, 0.9);
+    border-radius: 5px;
+}
+#titulo{
+    display: flex;
+    justify-content: flex-end;
+}
+section{
+    border: solid 1px black;  
+    border-radius: 5px;
+    height: 1500px;
+    background-image: url(../img/mk/mk10.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fondo{
+    background-color: rgba(255, 228, 196, 0.8);
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px 0 10px 0;
+}
+#izq{
+    float: left;
+    margin-right: 15px;
+}
+p{
+    margin: 0 25px 15px 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 20px;
+}
+#fotos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgba(255, 228, 196, 0.6);
+    border-radius: 5px;
+    margin: 10px;
+}
+figure{
+    margin: 15px;
+}
+.carrete{
+    border: solid 1px red;
+    padding: 5px;
+}
+.carrete:hover{
+    background-color: black;
+}
+figcaption{
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: red;
+    font-family: Geneva, Tahoma, sans-serif;
+}
+#der{
+    float: right;
+    margin-left: 15px;
+    border-radius: 15px;
+}
+#tit2{
+    margin-left: 35px;
+}
+#pie{
+    text-align: center;
+    margin-top: 25px;
+}
+#comprar{
+    font-family: Tahoma;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+    padding-top: 12px;
+    background-color: fuchsia;
+    border-radius: 8px;
+    box-shadow: 5px 5px yellow;
+    height: 52px;
+    width: 330px;
+    display: inline-block;
+}
+#comprar a:hover{
+    color: black;
+}
+#comprar:hover{
+    box-shadow: 5px 5px grey;
+}
+@media (max-width: 960px) {
+    #fotos{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: rgba(255, 228, 196, 0.6);
+        border-radius: 5px;
+        margin: 10px;
+    }
+}

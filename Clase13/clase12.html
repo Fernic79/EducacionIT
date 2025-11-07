@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12</title>
+</head>
+<body>
+    <h1>Seguimos trabajando con FORM</h1>
+    <p>Trabajamos el atributo ENCTYPE que posee tres formas de uso (datos codificados; datos multiplataforma; texto plano html5) según lo que trabajemos es lo que utilizaremos.</p>
+    <p>Otro atributo que podemos utilizar es el AUTOCOMPLETE es una forma de que el navegador le ayude a completar los datos que debe ingresar.</p>
+    <p>Con FIELDSET podemos darle un marco al formulario. Con la etiqueta LEGEND podemos ponerle un titulo que quedara en el fieldset. Con estilos por CSS podemos darle más forma.</p>
+    <p>Mientras el ID se toma para utilizar con el DOM, el NAME lo utilizaremos para las plantillas (esta más orientado a las variables) en el NODE. Para entender un poco más en el FRONT tendremos normalmente 3 capas (html, css y js), en el BACK tendremos distintas capas (react, node, js, etc) todo depende de lo que queramos hacer.</p>
+    <p>PLACEHOLDER es un atributo que le sugiere al usuario los datos a completar.</p>
+    <p>Para cuando utilizamos emails podemos agregarle el atributo PATTERN (un patróm de diseño para que el usuario introduzca) dentro del pattern utilizaremos arrays para ofrecer conjunto de cosas entre [], para ello la estructura que se indica para completar será la siguiente [letras y números]+@[empresa de mail]+\.[extension]{cantidad de letras nimimas y máximas 2,15}, veremos que en el ejemplo abarca todas las letras minúsculas y mayúsculas, números y símbolos. Hoy en día esto se trabaja con librerías que validan los datos que se ingresan.</p>
+    <p>El label de PASSWROD nos sirve para solicitar una clave al usuario y en la página los caracteres no se verán y en su lugar aparecerán asteriscos.</p>
+    <p>Aquí vamos a dejar unas páginas oficiales para obtener mas información de patrones que podemos pedir en los campos del formulario https://regexr.com/ - https://regexone.com/lesson/introduction_abcs - https://regex101.com/</p>
+    <hr>
+    <fieldset style="width: 600px;">
+        <legend>Datos Personales</legend>
+    <form method="post" enctype="multipart/form-data" autocomplete="on" action="index.js">
+        <label for="nombre1">Nombre: (POST)</label>
+            <input type="text" id="nombre1" name="nombre1" placeholder="Juan Jose" minlength="4" maxlength="20" required>
+            <br>
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" placeholder="1-100" min="1" max="100" required>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Juan@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" minlength="6" maxlength="15" required>
+            <br>
+            <label for="comentario">Comentario: </label>
+            <textarea name="comentario" id="comentario" cols="30" rows="10">Escribe aquí tu comentario...</textarea>
+            <br>
+            <button type="submit">Enviar</button>
+            <input type="button" value="Este es un boton"><!--Otra forma de usar un boton con input-->
+            <button type="reset">Borrar datos</button>
+            <input type="reset" value="borrar datos input">
+    </form>
+    </fieldset>
+    <h2>Vemos algo de GIT</h2>
+    <p>Hasta ahora venimos trabajando en una solo rama la MASTER, pero el git nos permite tener tantas ramas como queramos. Para crear una rama primero debemos ver cuantas ramas tenemos (git branch) y veremos cuantas hay. Para crear rama entonces utilizaremos el mismo comando y el incluimos el nombre (git branch rama1). Sabemos en que rama estamos trabajando cuando vemos en la terminal que aparece con un * y esta pintada de color.Para moverme de una rama a la otra utilizo el comando y su nombre de rama (git checkout rama1).</p>
+    <p>De esta forma puedo trabajar con una página que voy a utilizar con cambios por algún evento y luego de dicho evento volver a la página de la master. Como git registra cada vez que yo hago modificaciones, podemos volver a un punto pasado gracias a que tengo el historial de cambios (git log me muestra el historial de cambios).</p>
+    <p>Para subir las ramas debo subirlas con git push origin y nombre de la rama. Termino la clase con comentarios de git.</p>
+</body>
+</html>
