@@ -33,7 +33,7 @@ h3{
     font-size: 22px;
 }
 section{
-    background-color: rgb(226, 144, 192);
+    background-color: #e11364;
     border-radius: 40px;
     padding-bottom: 25px;
 }
@@ -81,4 +81,12 @@ a :hover{
 footer{
     text-align: center;
     letter-spacing: 1px;
+}
+@media (max-width: 900px) {
+    figure{
+        flex-direction: column;
+    }
+    img{
+        width: 100%;
+    }
 }
