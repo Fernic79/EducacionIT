@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 15 - Formulario y JV</title>
+</head>
+<body>
+    <h1>Seguimos trabajando formularios con Copilot (IA)</h1>
+    <p>Hasta aca estuvimos viendo casi todo Front incluso con formularios y algo de javascritp.</p>
+    <p>Podemos usar la opción de Copilot en el Visual en el logo al lado de la barra de busqueda (arriba al centro), le pedimos lo que queremos que nos haga y lo realiza.</p>
+    <hr>
+    <fieldset style="width: 600px; float: left;">
+        <legend>Datos Personales</legend>
+    <form method="post" enctype="multipart/form-data" autocomplete="on" action="index.js">
+        <label for="nombre1">Nombre: (POST)</label>
+            <input type="text" id="nombre1" name="nombre1" placeholder="Juan Jose" minlength="4" maxlength="20" required>
+            <br>
+            <label for="edad">Edad: </label>
+            <input type="number" id="edad" placeholder="1-100" min="1" max="100" required>
+            <br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Juan@gmail.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+            <br>
+            <label for="password">Password: </label>
+            <input type="password" id="password" name="password" minlength="6" maxlength="15" required>
+            <br>
+            <label for="comentario">Comentario: </label>
+            <textarea name="comentario" id="comentario" cols="30" rows="10">Escribe aquí tu comentario...</textarea>
+            <br>
+            <label for="provincia">Provincia</label><!--Agregado en la clase 15-->
+            <select name="provincia" id="provincia">
+                <option value="" selected>Selecciona la provincia</option><!--Dejamos vacio al Value porque no queremos datos de esta opcion-->
+                <option value="Sevilla">Sevilla</option>
+                <option value="Malaga">Málaga</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Galicia">Galicia</option>
+            </select>
+            <br>
+            <label for="genero">Género: </label><!--Formulario de opcion unica de círculo-->
+            <input type="radio" id="hombre" name="genero" value="hombre" checked>
+            <label for="hombre">Hombre</label>
+            <input type="radio" id="mujer" name="genero" value="mujer">
+            <label for="mujer">Mujer</label>
+            <br>
+            <label for="hobbies">Hobbies: </label><!--Formulario de seleccion multiple de cuadrado-->
+            <br>
+            <input type="checkbox" id="deporte" name="hobbies" value="futbol">
+            <label for="deporte">Futbol</label>
+            <input type="checkbox" id="musica" name="hobbies" value="musica">
+            <label for="musica">Música</label>
+            <input type="checkbox" id="lectura" name="hobbies" value="lectura">
+            <label for="lectura">Lectura</label>
+            <br>
+            <label for="porcentaje">Porcentaje</label><!--Formulario de tipo barra de arrastre (volumen, ect)-->
+            <input type="range" id="porcentaje" name="porcentaje" min="0" max="100" step="1" value="30">
+            <br>
+            <label for="archivo">Subir archivo: </label><!--Formulario de subir archivos a la página-->
+            <input type="file" id="archivo" name="archivo">
+            <br>
+            <label for="descargar">Descargar archivo</label><!--Formulario para que el usuario descargue un archivo X-->
+            <button type="button" id="descargar" name="descargar">
+                <a href="./prueba.html" download>Descargar</a><!---Donde va a estar el archivo a descargar por es el A-->
+            </button>
+            <br>
+            <button type="submit">Enviar</button>
+            <input type="button" value="Este es un boton">
+            <button type="reset">Borrar datos</button>
+            <input type="reset" value="borrar datos input">
+    </form>
+    </fieldset>
+    <br>
+    <!--Abrimos una ventana para generar otros datos (mapa, página, videos, música, etc)-->
+    <style>
+        .mapa{
+            float: right;
+        }
+    </style>
+    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.413946342771!2d-58.38310044999999!3d-34.6078662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac42dabce9b%3A0xbaa2d156dbe4138d!2zUGl6emVyw61hIEfDvGVycsOtbg!5e0!3m2!1ses!2sar!4v1762988919929!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <br>
+    <br>
+    <br>
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/oh2u7aSxYIU?list=RDQMkrBH1e6aX-s" title="🗡️ Música Gratis Épico &amp; Fantasía [Música Sin Copyright] - &quot;For Tomorrow&quot; por @SavfkMusic" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <br>
+    <iframe src="./prueba.html" frameborder="0" width="500px" height="350px"></iframe> <!--Incluimos la página prueba.html dentro de un iframe-->
+</body>
+</html>
