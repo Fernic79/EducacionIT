@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 22</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1>Seguimos trabajando y sumamos algo de bootstrap</h1>
+    <p>Bootstrap tiene en su página una serie de media querys con sus proporciones de tamños de pantalla para poder utilizarlos.</p>
+    <p>Linkeamos una barra de navegación desde bootstrap, hay que personalizarla. Puedo utilizarlo desde la <b>forma linked</b> o puedo descargar los archivos base para poder modificarlos (CSS - JS). De esta forma <b>descagaremos varios archivos CSS y JS para poder modificarlos de forma individual</b> dependiendo del elemento que estemos utilizando. La ultima forma de modificar Boostrap es descargar el código fuente SASS. La última forma de modificar Boostrap es <b>instalarla en nuestro proyecto y abrirlo desde React para modificarlo</b>.</p>
+    <br>
+    <!--Barra de navegación desde Boostrap-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" aria-disable="true">calcularIva</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<!--Cierra la barra de navegación-->
+    <br>
+    <h1 class="text-center mt-5 container">Vamos a calcular el precio con IVA</h1>
+    <br>
+    <br>
+    <div class="container mt-4 d-flex justify-content-center">
+        <h2 class="text-primary m-3">
+            <span id="precioSinIva">$0</span>
+        </h2>
+        <br>
+        <h2 class="text-danger m-3">
+            <span id="precioConIva">$0</span>
+        </h2>
+    </div>
+    <div class="container mt-4 text-center">
+        <button class="btn btn-info" onclick="calcularIva()">Calcular IVA</button>
+    </div>
+    <br>
+    <div class="container bg-primary"> <!--Contenedor con el 80% de ancho y fondo azul-->
+    <h1 class="text-center">Seguimos con la clase anterior y bucles</h1>
+    </div>
+    <p>Trabajeremos conectando el HTML con el JS</p>
+
+    <div class="productos container mt-4 d-flex justify-content-center flex-wrap">
+        <div><img src="../Practicas/Practica 02/Ej2/img/barcelona.png" alt=""></div>
+        <div><img src="../Practicas/Practica 02/Ej2/img/buenos-aires.jpg" alt=""></div>
+        <div><img src="../Practicas/Practica 02/Ej2/img/madrid.jpg" alt=""></div>
+        <div><img src="../Practicas/Practica 02/Ej2/img/miami.jpg" alt=""></div>
+        <div><img src="../Practicas/Practica 02/Ej2/img/paris.jpg" alt=""></div>
+        <div><img src="../Practicas/Practica 02/Ej2/img/pipa.jpg" alt=""></div>
+    </div>
+    <br>
+    <!--Trabajamos un login desde boostrap-->
+    <form class="container" id="formulario">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Password</label>
+    <input class="form-control" id="password" rows="3">
+    </div>
+    <button type="submit" class="btn btn-success">Login</button>
+    <button type="reset" class="btn btn-danger">Limpiar</button>
+    </form>
+    <!--Js-->
+    <script src="./index.js"></script>
+    <!--bootstrap con js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

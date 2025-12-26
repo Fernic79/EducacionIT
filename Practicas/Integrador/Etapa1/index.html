@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Juguetería Cósmica</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navUno">
+                <img src="./img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+                <h1>Juguetería Cósmica</h1>
+            </div>
+            <div id="navDos">
+                <ul>
+                    <li><a href="./pages/alta.html">ALTAS</a></li>
+                    <li><a href="./pages/contacto.html">CONTACTO</a></li>
+                    <li><a href="./pages/nosotros.html">NOSOTROS</a></li>
+                </ul>
+            </div>
+            <div id="navTres">
+                <form role="search">
+                    <input type="search" aria-label="Search"/>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Catálogo de Productos</h2>
+        <div class="orden">
+        <div class="cards">
+            <figure>
+                <img src="./img/productos/ami1.webp" alt="Yunobo Amiibo">
+            </figure>
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Yunobo Amiibo</h3>
+                <p>The Legend of Zelda: Tears of the Kingdom, Yunobo Amiibo</p>
+                <p class="precio">Precio $50.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Tulin Amiibo</h3>
+                <p>The Legend of Zelda: Tears of the Kingdom, Tulin Amiibo</p>
+                <p class="precio">Precio $50.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+            <figure>
+                <img src="./img/productos/ami2.webp" alt="Tulin Amiibo">
+            </figure>
+        </div>
+        </div>
+        <div class="orden">
+        <div class="cards">
+            <figure>
+                <img src="./img/productos/ami3.webp" alt="Sidon Amiibo">
+            </figure>
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Sidon Amiibo</h3>
+                <p>The Legend of Zelda: Tears of the Kingdom, Sidon Amiibo</p>
+                <p class="precio">Precio $50.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Riju Amiibo</h3>
+                <p>The Legend of Zelda: Tears of the Kingdom, Riju Amiibo</p>
+                <p class="precio">Precio $50.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+            <figure>
+                <img src="./img/productos/ami4.webp" alt="Riju Amiibo">
+            </figure>
+        </div>
+        </div>
+        <div class="orden">
+        <div class="cards">
+            <figure>
+                <img src="./img/productos/ami5.webp" alt="Min Min Amiibo">
+            </figure>
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Min Min</h3>
+                <p>Serie Amiibo Min Min del juego Super Smash Bros para Nintendo Switch</p>
+                <p class="precio">Precio $40.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Ganondorf Amiibo</h3>
+                <p>The Legend of Zelda: Tears of the Kingdom, Amiibo Ganondorf</p>
+                <p class="precio">Precio $40.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+            <figure>
+                <img src="./img/productos/ami6.webp" alt="Ganondorf Amiibo">
+            </figure>
+        </div>
+        </div>
+        <div class="orden">
+        <div class="cards">
+            <figure>
+                <img src="./img/productos/est1.webp" alt="Estuche Luigi's Mansion">
+            </figure>
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Estuche Luigi's Mansion</h3>
+                <p>Estuche RDS Game Traveler Luigi Masion 3 Nintendo Switch Lite</p>
+                <p class="precio">Precio $30.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+        </div>
+        <div class="cards">
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Estuche The Legend of Zelda</h3>
+                <p>Estuche RDS Game Traveler The Legend of Zelda: Links Awaking Nintendo Switch</p>
+                <p class="precio">Precio $35.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+            <figure>
+                <img src="./img/productos/est2.webp" alt="Estuche The Legend of Zelda">
+            </figure>
+        </div>
+        </div>
+        <div class="orden">
+        <div class="cards">
+            <figure>
+                <img src="./img/productos/est3.webp" alt="Estuche PowerA">
+            </figure>
+            <div class="contenido">
+                <div class="compartir">
+                    <img src="./img/share.png" alt="compartir icono" onclick="share()">
+                    <img class="like inactivo" src="./img/heartBlack.png" alt="corazon like icono" style="display: block;">
+                    <img class="like activo" src="./img/heartRed.png" alt="corazon like icono" style="display: none;">
+                </div>
+                <h3>Estuche PowerA</h3>
+                <p>Estuche PowerA Protection Case Mario Mystery Block Nintendo Switch</p>
+                <p class="precio">Precio $35.000</p>
+                <button onclick="comprar()">COMPRAR</button>
+            </div>
+        </div>
+        </div>
+    </main>
+    <script src="./js/index.js"></script>
+    <footer>
+        <hr>
+        <div>
+            <img src="./img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+            <p>Juguetería Cósmica</p>
+        </div>
+        <p>&copy; Todos los derechos reservados 2025</p>
+    </footer>
+</body>
+</html>

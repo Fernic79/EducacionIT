@@ -1,0 +1,14 @@
+
+//En SASS podemos usar variables para definir colores, fuentes, tamaños, etc. como JS
+$colordefondo: #3498db;
+$colortexto: #000000;
+$fuenteprincipal: 'Arial, sans-serif';
+
+//Aplicamos las variables en los estilos
+body {
+    background-color: $colordefondo;
+}
+p {
+    color: $colortexto;
+    font-family: $fuenteprincipal;
+}

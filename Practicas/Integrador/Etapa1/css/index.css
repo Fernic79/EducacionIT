@@ -1,0 +1,202 @@
+/*CSS de la página principal*/
+*{box-sizing: border-box;}
+body{
+    background: linear-gradient(45deg , aquamarine, pink);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Alineación del nav*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+    border-bottom: solid green 2px;
+    border-radius: 10px;
+}
+#navUno{
+    display: flex;
+}
+#navUno img, h1{
+    margin: 15px 5px 15px 0;
+    align-self: center;
+}
+#navDos ul{
+    display: flex;
+    margin: 15px 0 15px 0;
+    padding: 0;
+}
+#navDos ul li{
+    list-style-type: none;
+    margin: 20px;
+    
+}
+#navTres{
+    margin: 10px;
+    padding: 0;
+    align-content: center;
+}
+#navTres form{
+    padding: 0;
+    margin: 0;
+}
+#navTres input{
+    height: 30px;
+    border-radius: 5px;
+    border: solid grey 1px;
+}
+#navTres button{
+    height: 32px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: grey;
+}
+a:hover{
+    color: red;
+    font-weight: bold;
+}
+/*Alineación de las CARDS*/
+main{/*tronco del cuerpo*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../img/starsolidcolors.png);
+}
+.orden{/*alinear en 2 columnas*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cards{/*alineacion dentro del card*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 15px 8px 15px 8px;
+    padding: 10px;
+    border: dotted black 4px;
+    border-style: double;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 184);
+    width: 46%;
+    overflow: hidden;
+}
+/*Trabajando el contenido de las cards*/
+figure img{
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+figure{
+    margin: 0;
+    padding: 0;
+    border: solid red 2px;
+    border-style: dashed;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figure:hover img{
+    transform: scale(1.1);
+}
+.contenido{
+    margin: 10px;
+    align-content: center;
+}
+.compartir{
+    text-align: right;
+    margin-top: 0;
+}
+.precio{
+    font-weight: bold;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+button{
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 4px 4px 8px grey;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(70, 128, 70);
+    color: beige;
+}
+h2{
+    margin-left: 25px;
+}
+/*trabajamos la sección compartir*/
+.compartir{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.compartir img{
+    margin-left: 10px;
+    cursor: pointer;
+}
+/*Trabajamos el footer*/
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+}
+footer div p{
+    margin-left: 5px;
+}
+/*Trabajamos los breackpoints de media queries(lo hizo copilot)*/
+@media only screen and (max-width: 1150px){
+    .orden{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 800px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navDos ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navDos ul li{
+        margin: 10px 0;
+    }
+    #navTres{
+        margin-top: 0;
+    }
+    .orden{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 620px){
+    .orden{
+        flex-direction: column;
+    }
+    .cards{
+        flex-direction: column;
+        width: 90%;
+    }
+}

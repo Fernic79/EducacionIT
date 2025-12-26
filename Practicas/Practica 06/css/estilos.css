@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #d8b4b4;
+}
+h1{
+    color: #2f354a;
+}
+label{
+    margin-right: 5px;
+}
+input{
+    border: none;
+    border-bottom: solid 2px black;
+}
+button{
+    margin-bottom: 10px;
+}
+footer{
+    color: red; 
+    font-weight: bold; 
+    font-family: Arial;
+}

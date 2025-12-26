@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index.js"></script>
+    <title>Clase 21</title>
+</head>
+<body>
+    <h1>Seguimos con buclesy funciones</h1>
+    <br>
+    <p>Funciones son pequeños boques de código que ejecutan una tarea. Dentro de estas funciones puedo crear variables que solo serviran para cuando se ejecute código dentro de la función, estas variables locales no existen fuera de la función. Puedo incluso darle varios parámetors a dichas funciones como si fueran un array.</p>
+    <br>
+    <br>
+    <div class="container bg-primary"> <!--Contenedor con el 80% de ancho y fondo azul-->
+    <h1 class="text-center">Seguimos con la clase anterior y bucles</h1>
+    </div>
+        <div class="productos container">
+            <div><img src="../Practicas/Practica 02/Ej2/img/barcelona.png" alt=""></div>
+            <div><img src="../Practicas/Practica 02/Ej2/img/buenos-aires.jpg" alt=""></div>
+            <div><img src="../Practicas/Practica 02/Ej2/img/madrid.jpg" alt=""></div>
+            <div><img src="../Practicas/Practica 02/Ej2/img/miami.jpg" alt=""></div>
+            <div><img src="../Practicas/Practica 02/Ej2/img/paris.jpg" alt=""></div>
+            <div><img src="../Practicas/Practica 02/Ej2/img/pipa.jpg" alt=""></div>
+        </div>
+        <p>Empezamos a aplicar las propiedades de FLEX dando formato a nuestras imágenes. Desde la ventana de inspección puedo ver en el CSS en la parte de FLEX un recuadro que me permite jugar o probar todas las propiedades de FLEX (alineaciones, espaciado, etc.).</p>
+
+        <h1 class="mt-5" id="titulo"></h1>
+        <p>Probamos usar la vinculacion del JS en este titulo. En el JS tendremos una linea que tomara el dato que esta en este H1 por el ID y lo guardara en una variable.</p>
+        <br>
+        <form action="" class="mt-4  mb-4 container">
+            <label for="producto">Ingrese un producto:</label>
+            <input type="text" id="nombreProducto" name="nombreProducto">
+            <br>
+            <label for="precio">Precio</label>
+            <input type="number" id="precioProducto" name="precioProducto">
+            <br>
+        <!--Agregamos acciones a traves de JS desde la etiqueta en su elemento (para llamar a una funcion siempre colocar sus parentesis)-->
+            <button type="button" class="btn btn-success" onclick="capturaDatos()">Agregar Producto</button>
+            <button type="reset" class="btn btn-danger">Borrar</button>
+        
+        </form>
+</body>
+</html>

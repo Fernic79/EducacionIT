@@ -3,19 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        *{
-            box-sizing: border-box;
-        }
-        body{
-            background-color: black;
-            color: white;
-        }
-        h1{
-            color: red;
-        }
-        
-    </style>
+    <link rel="stylesheet" href="./practica.css">
     <title>Practicando Flex</title>
 </head>
 <body>
@@ -35,8 +23,43 @@
                 <img src="../Practicas/Practica 02/Ej2/img/barcelona.png" alt="Barcelona">
             </figure>
         </section>
-        
+        <p id="menu"><a href="#ventana">Abrir popup</a></p>
+        <br>
+        <div>
+            <section id="desplega">
+                <h3>Este es un popup de prueba</h3>
+                <p>Contenido del popup. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quidem.</p>
+                <p><a href="#">Cerrar popup</a></p>
+            </section>
+        </div>
+        <section id="forma">
+        <div id="uno">
+            <figure>
+            <img src="../Practicas/Integrador/Etapa1/img/img generica.webp" alt="">
+            </figure>
+            <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet impedit quod dolorum soluta placeat reiciendis doloremque quidem iure velit reprehenderit atque deserunt itaque similique ullam provident, eos numquam tempora.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam facere sunt, ex delectus sit nostrum maiores doloremque distinctio aperiam deleniti voluptates aspernatur ea iure cupiditate cum? Odit cumque nam numquam.</p>
+            </div>
+        </div>
+        <div id="uno">
+            <figure>
+            <img src="../Practicas/Integrador/Etapa1/img/img generica.webp" alt="">
+            </figure>
+            <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est eveniet impedit quod dolorum soluta placeat reiciendis doloremque quidem iure velit reprehenderit atque deserunt itaque similique ullam provident, eos numquam tempora.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam facere sunt, ex delectus sit nostrum maiores doloremque distinctio aperiam deleniti voluptates aspernatur ea iure cupiditate cum? Odit cumque nam numquam.</p>
+            </div>
+        </div>
+        </section>
     </main>
+    <script>
+        let cantidadDeGatos = 5;
+        const emojis = [1 , 2 , 3];
+        for (let i = 1; i <= cantidadDeGatos; i++) {
+            console.log(`Gato #${i}: ${emojis[(i-1) % emojis.length]}`);
+        }
+    </script>
     <footer>
 
     </footer>

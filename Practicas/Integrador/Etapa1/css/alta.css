@@ -1,0 +1,185 @@
+/*CSS de la página alta de productos*/
+*{box-sizing: border-box;}
+body{
+    background: linear-gradient(45deg , aquamarine, pink);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/*Alineación del nav*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    vertical-align: middle;
+    border-bottom: solid green 2px;
+    border-radius: 10px;
+}
+#navUno{
+    display: flex;
+}
+#navUno img, h1{
+    margin: 15px 5px 15px 0;
+    align-self: center;
+}
+#navDos ul{
+    display: flex;
+    margin: 15px 0 15px 0;
+    padding: 0;
+}
+#navDos ul li{
+    list-style-type: none;
+    margin: 20px;
+    
+}
+#navTres{
+    margin: 10px;
+    padding: 0;
+    align-content: center;
+}
+#navTres form{
+    padding: 0;
+    margin: 0;
+}
+#navTres input{
+    height: 30px;
+    border-radius: 5px;
+    border: solid grey 1px;
+}
+#navTres button{
+    height: 32px;
+    border-radius: 5px;
+    border: solid grey 1px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: grey;
+}
+a:hover{
+    color: red;
+    font-weight: bold;
+}
+/*main*/
+main{
+    background-image: url(../img/starsolidcolors.png);
+}
+#form{/*alineacion dentro del form*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+    padding: 10px;
+    border: dotted black 4px;
+    border-style: double;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 184);
+    width: 50%;
+}
+label{
+    margin: 2px;
+    width: 48%;
+}
+input{
+    margin: 2px;
+    width: 48%;
+    height: 22px;
+}
+textarea{
+    margin: 2px;
+    width: 48%;
+    height: 66px;
+}
+.numero{
+    width: 17%;
+}
+.row{
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px;
+    width: 48%;
+}
+button{
+    width: 120px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 4px 4px 8px grey;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(70, 128, 70);
+    color: beige;
+}
+h2{
+    margin-left: 25px;
+}
+/*Trabajamos el footer*/
+footer{
+    text-align: center;
+    margin-top: 20px;
+}
+footer div{
+    display: flex;
+    justify-content: center;
+}
+footer div p{
+    margin-left: 5px;
+}
+/*Trabajamos los breackpoints de media queries*/
+@media only screen and (max-width: 1150px){
+    #form{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 800px){
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navDos ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    #navDos ul li{
+        margin: 10px 0;
+    }
+    #navTres{
+        margin-top: 0;
+    }
+    #form{
+        width: 90%;
+    }
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+    .numero{
+        width: 22%;
+    }
+}
+@media only screen and (max-width: 620px){
+    #form{
+        width: 100%;
+        align-items: flex-start;
+    }
+    label{
+        width: 68%;
+    }
+    input{
+        width: 68%;
+    }
+    textarea{
+        width: 68%;
+    }
+    .numero{
+        width: 22%;
+    }
+}

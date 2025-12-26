@@ -1,0 +1,12 @@
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no caben en una sola fila */
+}
+img{
+    width: 250px;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}

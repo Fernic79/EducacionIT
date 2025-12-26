@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    color: red;
+}/*
+#ventana{
+    background-color: white;
+    color: black;
+    border: 2px solid red;
+    padding: 20px;
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+#ventana{
+    display: none;
+}
+#ventana:hover{
+    display: block;
+}*/
+#menu{
+    width: 200px;
+	position: relative;
+}
+#desplega{
+	position:absolute;
+	padding-left:0px;
+	display:none;
+	margin:0;
+	top:21px;
+	left:0px;
+}/*
+#desplega li{
+	margin: 0px;
+	position:relative;
+    width: 200px;
+	background: rgba(154, 154, 214, 0.6);
+	border:solid 1px #662605;
+}
+#desplega li a{
+	color:rgb(0, 0, 0);
+}	*/
+#menu:hover #desplega{
+	display:block;
+	margin:0;
+}
+/*Probando bordes con imagenes*/
+#forma{
+    display: flex;
+}
+#uno{
+    border: 15px transparent;
+    border-image-source: url(../Practicas/Integrador/Etapa1/img/marcProd1.png);
+    border-image-slice: 50 66 42 58 fill;
+    /*border-image-repeat: round;*/
+    border-image-width: 15px;
+    border-image-repeat: no-repeat;
+    /*border-image-outset: 0;
+    border-image: url(../Practicas/Integrador/Etapa1/img/marcProd1.png) 30 round;*/
+    padding: 20px;
+    margin-top: 20px;
+    width: 500px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titulo">Ejercicio 06</title>
+</head>
+<body>
+    <h1>Ejercicio 06</h1>
+    <p>Complete los campos con sus nombres y apellido, una vez realizado cargue los datos para corroborarlos y pasarlos a la lista.</p>
+    <!--Punto 2
+    <h2>Primer integrante</h2>
+    <dl>
+        <dt>Primer nombre</dt>
+        <dd id="nombre1">Fernando</dd>
+        <dt>Segundo nombre</dt>
+        <dd id="nombre12">Nicolás</dd>
+        <dt>Apellido</dt>
+        <dd id="apellido1">Garcia</dd>
+    </dl>
+    <h2>Segundo integrante</h2>
+    <dl>
+        <dt>Primer nombre</dt>
+        <dd id="nombre2">Debora</dd>
+        <dt>Segundo nombre</dt>
+        <dd id="nombre22">Sabrina</dd>
+        <dt>Apellido</dt>
+        <dd id="apellido2">Villanueva</dd>
+    </dl>-->
+    <form action="">
+        <label for="nombre1">Primer nombre:</label>
+        <input type="text" id="nombre1" name="nombre1">
+        <label for="nombre12">Segundo nombre:</label>
+        <input type="text" id="nombre12" name="nombre12">
+        <label for="apellido1">Primer apellido:</label>
+        <input type="text" id="apellido1" name="apellido1">
+        <label for="apellido12">Segundo apellido:</label>
+        <input type="text" id="apellido12" name="apellido12">
+        <br>
+        <button type="button" onclick="integrante1()">Completar</button>
+        <br>
+        <label for="nombre2">Primer nombre:</label>
+        <input type="text" id="nombre2" name="nombre2">
+        <label for="nombre22">Segundo nombre:</label>
+        <input type="text" id="nombre22" name="nombre22">
+        <label for="apellido2">Primer apellido:</label>
+        <input type="text" id="apellido2" name="apellido2">
+        <label for="apellido21">Segundo apellido:</label>
+        <input type="text" id="apellido21" name="apellido21">
+        <br>
+        <button type="button" onclick="integrante2()">Completar</button>
+        <br>
+        <button type="button" onclick="coincidir()">Buscar coincidencias</button>
+        <button type="button" onclick="imprimirConsola()">Mostrar datos</button>
+    </form>
+    <br>
+    <h1>Lista completa de integrantes:</h1>
+    <h2>Primer integrante</h2>
+    <dl>
+        <dt>Primer nombre</dt>
+        <dd id="n1"></dd>
+        <dt>Segundo nombre</dt>
+        <dd id="n12"></dd>
+        <dt>Primer Apellido</dt>
+        <dd id="a1"></dd>
+        <dt>Segundo Apellido</dt>
+        <dd id="a12"></dd>
+    </dl>
+    <h2>Segundo integrante</h2>
+    <dl>
+        <dt>Primer nombre</dt>
+        <dd id="n2"></dd>
+        <dt>Segundo nombre</dt>
+        <dd id="n22"></dd>
+        <dt>Primer Apellido</dt>
+        <dd id="a2"></dd>
+        <dt>Segundo Apellido</dt>
+        <dd id="a21"></dd>
+    </dl>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

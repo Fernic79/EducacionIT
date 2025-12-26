@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/alta.css">
+    <title>Alta</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navUno">
+                <img src="../img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+                <h1>Juguetería Cósmica</h1>
+            </div>
+            <div id="navDos">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="./contacto.html">CONTACTO</a></li>
+                    <li><a href="./nosotros.html">NOSOTROS</a></li>
+                </ul>
+            </div>
+            <div id="navTres">
+                <form role="search">
+                    <input type="search" aria-label="Search"/>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulario de Alta de Productos</h2>
+        <form id="form">
+            <label>Nombre:</label>
+            <input type="text">
+            <div class="row">
+            <label>Precio:</label>
+            <input type="text" placeholder="$ -">
+            </div>
+            <div class="row">
+            <label>Stock:</label>
+            <input type="number" placeholder="1" class="numero">
+            </div>
+            <label>Marca:</label>
+            <input type="text">
+            <label>Categoría:</label>
+            <input type="text">
+            <label>Descripción Corta:</label>
+            <textarea></textarea>
+            <label>Descripción Larga</label>
+            <textarea></textarea>
+            <div class="row">
+            <label>Edad desde:</label>
+            <input type="number" placeholder="1 año" min="0" max="16" class="numero">
+            <label>Edad hasta:</label>
+            <input type="number" placeholder="1 año" min="0" max="16" class="numero">
+            </div>
+            <label>Cargar foto:</label>
+            <input type="file" accept="image/jpg, image/png, image/webp, image/gif">
+            <br>
+            <button type="submit" onclick="enviar()">Cargar Alta</button>
+        </form>
+    </main>
+    <script src="../js/index.js"></script>
+    <footer>
+        <hr>
+        <div>
+            <img src="../img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+            <p>Juguetería Cósmica</p>
+        </div>
+        <p>&copy;Todos los derechos reservados 2025</p>
+    </footer>
+</body>
+</html>

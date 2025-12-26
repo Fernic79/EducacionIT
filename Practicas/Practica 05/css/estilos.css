@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-image: url(../img/fondo2.jpg);
+}   
+h1{
+    color: rgb(44, 78, 12);
+    text-align: center;
+    border-bottom: solid 3px black;
+}
+h2{
+    text-decoration: underline;
+    padding-left: 5px;
+}
+#fondo{
+    background-color: rgba(130, 130, 30, 0.2);
+    border-radius: 15px;
+    padding: 8px;
+}
+span{
+    font-weight: bold;
+}
+.tips{
+    font-style: italic;
+    font-size: 14px;
+}
+ul{
+    padding: 5px;
+}
+ul li{
+    display: inline;
+    list-style-type: none;
+    margin-right: 20px;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+#consejos, #alimentos, #veterinarias, #contacto{
+    margin: 20px 10px 20px 10px;
+}
+ol li{
+    border: solid 2px red;
+    border-radius: 10px;
+    margin: 10px 5px 10px 5px;
+    padding: 8px 5px 8px 5px;
+    background-color: rgb(184, 235, 169);
+    list-style-image: url(../img/huella1.png) ;
+}
+.bloque{
+    display: inline-block;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.columna{
+    flex-direction: column;
+    padding-left: 5px;
+}
+.columna p{
+    line-height: 20px;
+}
+figcaption{
+    text-align: center;
+    color: red;
+}
+iframe{
+    width: 80%;
+    margin: 5px;
+    border-radius: 10px;
+}
+#alimentos{
+    border: solid 3px green;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgb(252, 247, 178);
+}
+#veterinarias{
+    border: solid 3px violet;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: rgb(248, 192, 206);
+}
+img{
+    border-radius: 35px;
+}
+footer{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    text-align: center;
+}
+@media (max-width: 960px) {
+    .flex{
+        flex-direction: column;
+    }    
+}
+@media (max-width: 530px){
+    ul li{
+        margin-right: 5px;
+    }
+}
+nav{
+    text-align: center;
+    background-color: aquamarine;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 15px;
+}

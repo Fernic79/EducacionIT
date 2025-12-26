@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="navUno">
+                <img src="../img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+                <h1>Juguetería Cósmica</h1>
+            </div>
+            <div id="navDos">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="./alta.html">ALTAS</a></li>
+                    <li><a href="./nosotros.html">NOSOTROS</a></li>
+                </ul>
+            </div>
+            <div id="navTres">
+                <form role="search">
+                    <input type="search" aria-label="Search"/>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulario de Contacto</h2>
+        <form id="form">
+            <label>Nombre:</label>
+            <input type="text">
+            <label>email:</label>
+            <input type="email" placeholder="pepe@gmail.com">
+            <label>Comentarios:</label>
+            <textarea></textarea>
+            <p>Si lo desea a continuacion marque los productos de su preferencia:</p>
+            <div class="row">
+            <label>Autos</label>
+            <input type="checkbox">
+            <label>Aviones</label>
+            <input type="checkbox">
+            <label>Muñecos</label>
+            <input type="checkbox">
+            <label>Juegos de Mesa</label>
+            <input type="checkbox">
+            <label>Rompecabezas</label>
+            <input type="checkbox">
+            <label>Disfraces</label>
+            <input type="checkbox">
+            </div>
+            <button onclick="enviar()">Enviar</button>
+        </form>
+    </main>
+    <script src="../js/index.js"></script>
+    <footer>
+        <hr>
+        <div>
+            <img src="../img/spaceship-flying-logo-by-Vexels.png" alt="Logo">
+            <p>Juguetería Cósmica</p>
+        </div>
+        <p>&copy;Todos los derechos reservados 2025</p>
+    </footer>
+</body>
+</html>
