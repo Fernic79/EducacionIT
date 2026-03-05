@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Lobster&display=swap');
+
+/* Cargando la imagen de la ciudad al fondo */
+html {
+    background-color: #4c7b9d;
+    background-image: url(./img/ciudad.png);
+    background-repeat: repeat-x;
+    background-position: center bottom;
+    background-size: auto 200px;
+    background-attachment: fixed;
+    margin: auto;
+    width: 100%;
+}
+/* Creando el cuadrado de fondo en el body */
+body {
+    margin: 90px auto;
+    width: 78%;
+    padding: 20px 20px 20px 20px;
+    background-color: #acdadc;
+    line-height: 1.5;
+    box-shadow: inset 4px 4px 10px 0 rgba(63, 63, 63, 0.7);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+}
+/* Cargando la imagen del gato al borde inferior del body*/
+body::after{
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 40%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+/* Estilos para el artículo */
+h1 {
+    color: #f1faee;
+    font-size: 2.1em;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-color: #df3448;
+    position: absolute;
+    top: -91px;
+    left: -285px;
+    right: -285px;
+    bottom: 0px;
+    z-index: 1;
+    height: 60px;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: "Lobster";
+    color: #df3448;
+    font-style: normal;
+    margin-top: 20px;
+    font-size: 1.7em;
+    text-align: center;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #213557;
+    margin: 30px 15px 20px 15px;
+    text-align: justify;
+}
+p:nth-of-type(2)::first-letter, 
+p:nth-of-type(3)::first-letter, 
+p:nth-of-type(4)::first-letter,
+p:nth-of-type(6)::first-letter,
+p:nth-of-type(7)::first-letter,
+p:nth-of-type(8)::first-letter,
+p:nth-of-type(9)::first-letter,
+p:nth-of-type(10)::first-letter {
+    font-family: "Lobster";
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #213557;
+    float: left;
+    margin-right: 0.6px;
+    line-height: 0.7;
+}
+p:nth-of-type(1),
+p:nth-of-type(5){
+    width: 75%;
+    font-style: italic;
+    font-size: 1.1em;
+    margin: auto;
+    text-align: center;
+}
+p:nth-of-type(1)::before{
+    content: "-";
+}
+p:nth-of-type(1)::after{
+    content: "-";
+}
+p:nth-of-type(5)::before{
+    content: "-";
+}
+p:nth-of-type(5)::after{
+    content: "-";
+}
+/* Dando movimiento responsive a la imagen del gato*/
+@media (max-width: 1440px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 96%;
+    left: 40%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}
+@media (max-width: 1024px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 96%;
+    left: 40%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}
+@media (max-width: 768px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 96%;
+    left: 30%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}
+@media (max-width: 425px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 22%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}
+@media (max-width: 375px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 22%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}
+@media (max-width: 320px) {
+    body::after{
+    content: "";
+    position: absolute;
+    top: 98.5%;
+    left: 15%;
+    width: 100vh;
+    height: 100vh;
+    background-image: url(./img/gato.png);
+    background-repeat: no-repeat;
+    background-size: 200px auto;
+    z-index: 9999; 
+    pointer-events: none;
+}
+}

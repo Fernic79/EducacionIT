@@ -1,0 +1,25 @@
+{
+  "name": "clase-nativa",
+  "version": "1.0.0",
+  "description": "Proyecto de práctica completa con la app nativa y backend básico",
+  "homepage": "https://github.com/Leandro17102002/tp-Integrador-entrega-1#readme",
+  "bugs": {
+    "url": "https://github.com/Leandro17102002/tp-Integrador-entrega-1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leandro17102002/tp-Integrador-entrega-1.git"
+  },
+  "license": "ISC",
+  "author": "Leandro",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

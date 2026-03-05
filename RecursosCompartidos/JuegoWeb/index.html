@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Caida Libre</title>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+
+    <div id="score-hud">0m</div>
+
+    <div id="ui-layer">
+        <!-- PANTALLA DE INICIO -->
+        <div id="start-screen" class="screen">
+            <h1>CAÍDA LIBRE</h1>
+            <p>El abismo te espera. La velocidad aumenta.<br>El túnel se cierra.</p>
+            <div class="controls-hint">
+                Inclinación (Móvil) o Flechas (PC)
+            </div>
+            <button id="start-btn" class="btn">SALTAR AL VACÍO</button>
+        </div>
+
+        <!-- PANTALLA DE GAME OVER -->
+        <div id="game-over-screen" class="screen hidden">
+            <h1 style="color: #ef4444; text-shadow: 0 0 20px rgba(239, 68, 68, 0.3);">IMPACTO</h1>
+            <p id="final-score" style="font-size: 1.5rem; color: white; margin-bottom: 0.5rem;">0m</p>
+            <p id="high-score" style="font-size: 0.9rem;">Récord Personal: 0m</p>
+            <button id="restart-btn" class="btn" style="background: linear-gradient(135deg, #ef4444, #dc2626); box-shadow: 0 10px 25px -5px rgba(239, 68, 68, 0.5);">REINTENTAR</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

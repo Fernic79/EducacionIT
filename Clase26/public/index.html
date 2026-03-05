@@ -10,8 +10,26 @@
     <br>
     <p>En esta segunda forma vamos a trabajar desde NODE. Para ello utilizaremos comandos que ya tenemos instalados, en este caso se utiliza en "npm", es el administrador que maneja NODE. Para crear un proyecto de SASS en NODE, se debe ejecutar el comando "npm init -y" para inicializar el proyecto y luego "npm install sass" para instalar SASS.</p>
     <p>Desde la consola con NODE utilizamos el comando npm init para crear el archivo json que tendrá nuestro paquete a trabajar.</p>
-    <p>Si utilizo un npm init -y de esta manera nos creará un archivo package.json por default.</p>
+    <p>Si utilizo un npm init -y de esta manera nos creará un archivo package.json por default. De la otra forma nos pedirá los parámetros para configurar el .json.</p>
     <p>Una vez creado el archivo necesito agregarle herramientas para trabajar con SASS, para ello utilizo el comando npm install -g sass.</p>
     <p>Al instalarlo descarga los paquetes en un directorio y además agrega la versión del soft en el archivo que habíamos creado.</p>
+    <br>
+    <hr>
+    <br>
+    <h2>Clase 27 - seguimos con SASS</h2>
+    <p>La forma de instalación de -g del SASS es para instalarlo a nivel global para utilizarlo en NODE en cualquier directorio que trabaje. Se instala la libreria de SASS a NODE para utilizarlo en todo el sistema, de la otra forma solo instalará la libreria para utilizarla solo en el directorio que estoy trabajando.</p>
+    <p>La librería de NODEMON nos permite al instalarla al NODE que podamos tener abierta la terminal para ir chequeando en tiempo real el código que voy escribiendo en mis archivos .js de esta manera puedo ver si cometo errores al escribirlo. En lugar de ejecutar node xxx.js a cada rato para ver mi codigo ejecutandose.</p>
+    <p>Para utilizar NODEMON es como NODE, y deja abierta la consola ej: nodemon xxx.js Para terminar el proceso y apagar nodemon para que pare lo hare desde el comando CTRL+C.</p>
+    <p>De la misma forma que instalamos estas librerias o dependencia podemos utilisar el comando UNINSTALL para sacar aquellas que ya no utilice.</p>
+    <p>Recordar que si no queremos que cargue algun elemento del directorio utilizamos un archivo .GITIGNORE y en el detallamos que no queremos ejecutar.</p>
+    <p>Para ejecutar el archivo index.js ahora debo escribir en el "script" del archivo package.json la linea de comando para hacerlo, ejemplo start: nodemon index.js, asi de esta manera al ejecuar nodemon start en la consola se ejecuta el index.js; debajo de la seccion test del script. Lo mismo debemos hacer con SASS para crear el archivo CSS => "SASS": scss sass: css index.css</p>
+    <hr>
+    <h2>Clase 29</h2>
+    <p>Estamos trabajando con SASS y modificamos el script dentro de sass para crear un carpeta CSS. 
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass public/sass:public/css"
+     },</p>
+     <p>Trabajamos con el archivo server.js el package.jason, y algo de node.</p>
 </body>
 </html>
