@@ -5,6 +5,10 @@ const morgan = require('morgan');
 const hbs = require('express-handlebars');
 const path = require('path');
 
+//importamos las rutas
+const usuariosRouter = require('./routes/usuarios.routes');
+const productosRouter = require('./routes/productos.routes');
+
 //Creamos el servidor
 const app = express();
 
@@ -26,6 +30,9 @@ app.use(express.urlencoded({ extended: true }));//para parsear el body de las pe
 app.use(express.static(path.join(__dirname, 'public')));//para servir archivos estáticos
 
 //rutas
+app.use('/api/usuarios', usuariosRouter);//rutas para usuarios
+app.use('/api/productos', productosRouter);//rutas para productos
+
 app.get('/', (req, res) => {
     res.render('home');//renderizamos la vista home.hbs
 });
