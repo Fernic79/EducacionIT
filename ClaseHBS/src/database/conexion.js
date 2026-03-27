@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 
-const MONGO_URL = process.env.MONGO_URL_ATLAS || process.env.MONGO_URL_LOCAL;
+const MONGO_URL = process.env.MONGO_URL_LOCAL || process.env.MONGO_URL_ATLAS;
 
 const connectDB = async () => {
     try {

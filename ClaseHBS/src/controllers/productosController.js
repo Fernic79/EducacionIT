@@ -16,5 +16,27 @@ const guardarProducto = async (req, res) => {
     }
 }
 
+const listarProductos = async (req, res) => {
+    let titulo = 'Listado de Productos';
+        try {
+            const productos = await ProductoModel.find({}).lean();//buscamos todos los productos en la base de datos
+            res.render('listarProductos', { productos: productos, titulo: titulo });//renderizamos la vista listarProductos.hbs y le pasamos los productos encontrados
+        } catch (error) {
+            res.status(500).json({ mensaje: 'Error al listar los productos', error: error });
+        }
 
-module.exports = { dameFormulario, guardarProducto };//exportamos el controlador para poder usarlo en productosRoutes.js
+    }
+    const detalleProducto = async (req, res) => {
+        let descripcion = 'Detalle del Producto Seleccionado';
+        let stock = 'Stock Disponible';
+        const id = req.params.id;
+
+        try {
+            const producto = await ProductoModel.findById(id).lean();
+            res.render('detalleProducto', { producto: producto, id: id, descripcion: descripcion, stock: stock });
+        } catch (error) {
+            res.status(500).json({ mensaje: 'Error al mostrar los detalles del producto', error: error });
+        }
+    }
+
+module.exports = { dameFormulario, guardarProducto, listarProductos, detalleProducto };//exportamos el controlador para poder usarlo en productosRoutes.js
