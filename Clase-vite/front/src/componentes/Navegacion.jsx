@@ -4,7 +4,7 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+//import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navegacion() {
   return (
@@ -17,6 +17,7 @@ function Navegacion() {
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/login">Login</Nav.Link>
             <Nav.Link href="/productos">Productos</Nav.Link>
+            <Nav.Link href="/props">Props Varios</Nav.Link>
             <Nav.Link href="/old">Old App</Nav.Link>
           </Nav>
         </Navbar.Collapse>

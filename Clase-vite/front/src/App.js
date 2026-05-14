@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Footer from './componentes/Footer'
 import Productos from './pages/Formulario'
 import Registro from './pages/Registro'
+import PropsVarios from './pages/PropsVarios';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/productos' element={<Productos />} />
         <Route path='/registro' element={<Registro />} />
+        <Route path='/props' element={<PropsVarios />} />
         <Route path='/old' element={<OldApp />} />
       </Routes>
       

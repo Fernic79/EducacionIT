@@ -1,0 +1,21 @@
+🚀 PROYECTO: Juguetería Cósmica (Versión Estudiante) - CHECKPOINT
+
+Contexto: Estamos haciendo un "reset" del frontend para que el código sea de nivel Junior (explicable y académico). El backend ya existe pero vamos a revisarlo para simplificar la lógica si es necesario.
+
+Punto de partida para hoy:
+
+Revisión del Backend: Auditar modelos, controladores y rutas.
+
+Objetivo: Asegurar un CRUD funcional y sencillo.
+
+Pruebas: Testear todo con Thunder Client (GET, POST, PUT, DELETE).
+
+Imágenes: Manejo local (carpeta /public/img en el front) para evitar librerías externas complejas.
+
+Stack acordado:
+
+Back: Node, Express, MongoDB (Mongoose), Morgan, Cors.
+
+Front: React (Vite), Axios, Bootstrap, React Router Dom.
+
+Meta del día: Dejar el backend "blindado" y listo para que el frontend pueda consumir la API mañana sin errores.

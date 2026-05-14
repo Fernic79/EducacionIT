@@ -6,16 +6,17 @@ dotenv.config();
 
 // Importar el servidor
 import app from './app.js';
+import { conexionMongoLocal } from './database/conexionLocal.js';
 
 // Levantar el servidor
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 
 // 1. Conexión a MongoDB Atlas
 // Importar la función de conexión a MongoDB
-import { conexionMongo } from './database/conexionAtlas.js';
+//import { conexionMongo } from './database/conexionAtlas.js';
 
 // Establecer la conexión a MongoDB antes de iniciar el servidor
-conexionMongo();
+conexionMongoLocal();
 
 // Inicio del servidor
 app.listen(PORT, () => {

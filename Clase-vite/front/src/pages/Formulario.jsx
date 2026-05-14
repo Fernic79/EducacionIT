@@ -6,7 +6,44 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
+import { useState } from 'react';
+import axios from "axios"
+
 function Formulario() {
+
+    const URL_PRODUCTO = import.meta.env.VITE_APP_URL_PRODUCTOS;
+
+    const [nombreProducto, setNombreProducto] = useState("");
+    const [precioProducto, setPrecioProducto] = useState("");
+    const [descripcionProducto, setDescripcionProducto] = useState("");
+    const [imagenProducto, setImagenProducto] = useState("");
+    
+
+    const enviarProducto = async (e) => {
+        e.preventDefault();
+
+        const producto = {
+            nombreProducto,
+            precioProducto,
+            descripcionProducto,
+            imagenProducto
+        }
+
+        console.log(producto)
+
+        try {
+            const response = await axios.post(`${URL_PRODUCTO}`, producto)
+
+            console.log(response);
+            
+        } catch (error) {
+            console.log(error);
+            
+        } finally {
+            console.log("");
+        }
+    }
+
     return (
         <section
         className="py-5"
@@ -43,13 +80,16 @@ function Formulario() {
                             </p>
                         </div>
 
-                        <Form>
+                        <Form onSubmit={enviarProducto}>
                             <Form.Group className="mb-3" controlId="productoNombre">
                             <Form.Label className="fw-semibold">Nombre</Form.Label>
                             <Form.Control
                                 type="text"
                                 size="lg"
                                 placeholder="Ej: Auriculares Pro"
+                                value={nombreProducto}
+                                required
+                                onChange={(e)=>{setNombreProducto(e.target.value)}}
                             />
                             </Form.Group>
 
@@ -59,6 +99,9 @@ function Formulario() {
                                 type="number"
                                 size="lg"
                                 placeholder="Ej: 89990"
+                                value={precioProducto}
+                                required
+                                onChange={(e)=>{setPrecioProducto(e.target.value)}}
                             />
                             </Form.Group>
 
@@ -68,6 +111,8 @@ function Formulario() {
                                 as="textarea"
                                 rows={4}
                                 placeholder="Describí el producto, sus características y beneficios."
+                                value={descripcionProducto}
+                                onChange={(e)=>{setDescripcionProducto(e.target.value)}}
                             />
                             </Form.Group>
 
@@ -77,11 +122,13 @@ function Formulario() {
                                 type="url"
                                 size="lg"
                                 placeholder="https://ejemplo.com/imagen.jpg"
+                                value={imagenProducto}
+                                onChange={(e)=>{setImagenProducto(e.target.value)}}
                             />
                             </Form.Group>
 
                             <div className="d-grid">
-                            <Button variant="dark" size="lg" className="rounded-3">
+                            <Button variant="dark" type="submit" size="lg" className="rounded-3">
                                 Guardar producto
                             </Button>
                             </div>

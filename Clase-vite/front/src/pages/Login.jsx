@@ -1,4 +1,3 @@
-
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
@@ -7,7 +6,47 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { Link } from "react-router-dom";
 
+// import de los estados de react
+import { useState } from 'react';
+// importamos axios para los métodos http
+import axios from "axios";
+// importamos un hook de las rutas para la redirección
+import { useNavigate } from "react-router-dom";
+
 function Login() {
+  // iicializamos los estdos
+  const [email, setEmail ] = useState("");
+  const [password, setPassword ] = useState("");
+
+  // inicializo el hook de la redirección
+  const navigate = useNavigate();
+
+  // importamos la ruta del back para el login
+  const URL = import.meta.env.VITE_APP_LOGIN_URL
+
+
+
+  const handleSubmit = async (e) =>{
+    e.preventDefault();
+
+    // enviamos los datos al backend
+    try {
+      const response = await axios.post(`${URL}`, { email, password })
+      console.log(response)
+      const data = response.data
+      console.log(data.message)
+
+      if(response.status === 200) {
+        //redirecciona al admin
+        navigate('/admin')
+      }
+    } catch (error) {
+      console.error(error);
+    } finally{
+      navigate("/")
+    }
+  }
+  
   return (
     <section
       className="py-5"
@@ -41,13 +80,15 @@ function Login() {
                         </p>
                       </div>
 
-                      <Form>
+                      <Form onSubmit={handleSubmit}>
                         <Form.Group className="mb-3" controlId="loginEmail">
                           <Form.Label className="fw-semibold">Email</Form.Label>
                           <Form.Control
                             type="email"
                             size="lg"
                             placeholder="nombre@correo.com"
+                            value={email}
+                            onChange={(e)=>{setEmail(e.target.value)}}
                           />
                         </Form.Group>
 
@@ -57,6 +98,8 @@ function Login() {
                             type="password"
                             size="lg"
                             placeholder="Ingresá tu contraseña"
+                            value={password}
+                            onChange={(e)=>{setPassword(e.target.value)}}
                           />
                         </Form.Group>
 
